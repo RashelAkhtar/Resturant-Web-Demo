@@ -22,15 +22,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('https://antdisplay.com/pub/media/wysiwyg/b_1_.jpg');
-    /* url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f5f5f5" width="1200" height="800"/><path d="M0,400 Q300,200 600,400 T1200,400" stroke="%23e0e0e0" stroke-width="2" fill="none"/></svg>'); */
-  background-size: cover;
-  background-position: center;
   color: white;
   text-align: center;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-image: url('https://antdisplay.com/pub/media/wysiwyg/b_1_.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+  z-index: 0;
 }
 
 .hero-overlay {
@@ -39,7 +47,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(rgba(79, 79, 79, 0.6), rgba(255, 255, 255, 0.7));
+  z-index: 1;
 }
 
 .hero-content {
@@ -92,14 +101,14 @@
 }
 
 .btn-primary {
-  background: #c9a961;
+  background: #8B2635;
   color: white;
 }
 
 .btn-primary:hover {
-  background: #b8964f;
+  background: #A02030;
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(201, 169, 97, 0.4);
+  box-shadow: 0 5px 15px rgba(139, 38, 53, 0.4);
 }
 
 .btn-secondary {
@@ -110,13 +119,13 @@
 
 .btn-secondary:hover {
   background: white;
-  color: #333;
+  color: #8B2635;
 }
 
 /* About Section */
 .about {
   padding: 5rem 0;
-  background: #f9f9f9;
+  background: #F5E6D3;
 }
 
 .about-content {
@@ -179,12 +188,12 @@
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: #c9a961;
+  background: #8B2635;
 }
 
 .dish-gallery {
   padding: 5rem 0;
-  background: #f9f9f9;
+  background: #F5E6D3;
 }
 
 .gallery-subtitle {
@@ -326,7 +335,7 @@
 /* Testimonials Section */
 .testimonials {
   padding: 5rem 0;
-  background: #f9f9f9;
+  background: #F5E6D3;
 }
 
 .testimonials-grid {
@@ -386,7 +395,7 @@
 .info-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #c9a961;
+  color: #8B2635;
 }
 
 .info-item p {
@@ -395,7 +404,7 @@
 }
 
 .contact-form {
-  background: #f9f9f9;
+  background: #F5E6D3;
   padding: 2rem;
   border-radius: 10px;
 }
@@ -415,7 +424,7 @@
 
 .form-group input:focus {
   outline: none;
-  border-color: #c9a961;
+  border-color: #8B2635;
 }
 
 /* Animations */

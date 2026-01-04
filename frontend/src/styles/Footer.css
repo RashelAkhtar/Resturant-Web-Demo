@@ -18,13 +18,13 @@
 }
 
 .footer-section h3 {
-  color: #c9a961;
+  color: #D4AF37;
   margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 
 .footer-section h4 {
-  color: #c9a961;
+  color: #D4AF37;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
@@ -51,7 +51,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: #c9a961;
+  color: #D4AF37;
 }
 
 .social-links {
@@ -70,9 +70,9 @@
 }
 
 .social-links a:hover {
-  color: #c9a961;
-  border-color: #c9a961;
-  background: rgba(201, 169, 97, 0.1);
+  color: #D4AF37;
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.1);
 }
 
 .newsletter-form {
@@ -93,12 +93,12 @@
 
 .newsletter-form input:focus {
   outline: none;
-  border-color: #c9a961;
+  border-color: #D4AF37;
 }
 
 .newsletter-form button {
   padding: 0.75rem 1.5rem;
-  background: #c9a961;
+  background: #8B2635;
   color: white;
   border: none;
   border-radius: 5px;
@@ -108,7 +108,7 @@
 }
 
 .newsletter-form button:hover {
-  background: #b8964f;
+  background: #A02030;
 }
 
 .footer-bottom {
