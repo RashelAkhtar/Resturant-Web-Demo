@@ -1,0 +1,474 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homepage {
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://antdisplay.com/pub/media/wysiwyg/b_1_.jpg');
+    /* url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f5f5f5" width="1200" height="800"/><path d="M0,400 Q300,200 600,400 T1200,400" stroke="%23e0e0e0" stroke-width="2" fill="none"/></svg>'); */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f0f0f0;
+  animation: fadeInUp 1s ease 0.2s backwards;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  animation: fadeInUp 1s ease 0.4s backwards;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  animation: fadeInUp 1s ease 0.6s backwards;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #c9a961;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #b8964f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(201, 169, 97, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #333;
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background: #f9f9f9;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px;
+  /* background: linear-gradient(135deg, #c9a961 0%, #b8964f 100%); */
+  background-image: url('https://www.franciscosegarra.com/wp-content/uploads/2022/03/restaurant-decor-designs.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Menu Highlights Section */
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: #c9a961;
+}
+
+.dish-gallery {
+  padding: 5rem 0;
+  background: #f9f9f9;
+}
+
+.gallery-subtitle {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  grid-auto-rows: 250px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item:nth-child(1),
+.gallery-item:nth-child(4),
+.gallery-item:nth-child(7) {
+  grid-row: span 2;
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item:nth-child(1) .gallery-image {
+  background-image: url('https://s.lightorangebean.com/media/20240914160809/Spicy-Penne-Pasta_-done.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(2) .gallery-image {
+  background-image: url('https://meyermarket.com/cdn/shop/files/MM_EcommEmail_SUMMERSTEAKSALEv2_1500x.jpg?v=1742323804');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(3) .gallery-image {
+  background-image: url('https://www.pccmarkets.com/wp-content/uploads/2017/08/pcc-rosemary-grilled-salmon-flo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(4) .gallery-image {
+  background-image: url('https://farmtojar.com/wp-content/uploads/2022/09/012BD4A8-9167-4182-BFDD-0CDDE752D2B0.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(5) .gallery-image {
+  background-image: url('https://bakerbynature.com/wp-content/uploads/2025/01/Caesar-Salad-9.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(6) .gallery-image {
+  background-image: url('https://www.justonecookbook.com/wp-content/uploads/2021/02/Chocolate-Souffle-9632-I-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(7) .gallery-image {
+  background-image: url('https://www.kingarthurbaking.com/sites/default/files/styles/featured_image/public/2023-03/Tiramisu_1426.jpg?itok=i3F-CRsz');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery-item:nth-child(8) .gallery-image {
+  background-image: url('https://spicetraveller.com/wp-content/uploads/2024/12/Authentic-Classic-Lobster-Thermidor-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .image-overlay {
+  opacity: 1;
+}
+
+.dish-name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .dish-name {
+  transform: translateY(0);
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 5rem 0;
+  background: #f9f9f9;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  font-style: italic;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #333;
+}
+
+/* Contact Section */
+.contact {
+  padding: 5rem 0;
+  background: white;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.info-item {
+  margin-bottom: 2rem;
+}
+
+.info-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #c9a961;
+}
+
+.info-item p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.contact-form {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #c9a961;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .gallery-item:nth-child(1),
+  .gallery-item:nth-child(4),
+  .gallery-item:nth-child(7) {
+    grid-row: span 1;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
